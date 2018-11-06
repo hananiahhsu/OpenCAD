@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Line</class>
+ <widget class="QWidget" name="Line">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>165</width>
+    <height>50</height>
+   </rect>
+  </property>
+  <layout class="QHBoxLayout">
+   <item>
+    <widget class="QToolButton" name="TypeAuto">
+     <property name="toolTip">
+      <string>Same Entity Type as Original</string>
+     </property>
+     <property name="icon">
+      <iconset>
+       <normaloff>TypeAuto.svg</normaloff>TypeAuto.svg</iconset>
+     </property>
+     <property name="checkable">
+      <bool>true</bool>
+     </property>
+     <property name="checked">
+      <bool>true</bool>
+     </property>
+     <property name="autoExclusive">
+      <bool>true</bool>
+     </property>
+     <attribute name="buttonGroup">
+      <string notr="true">Type</string>
+     </attribute>
+    </widget>
+   </item>
+   <item>
+    <widget class="QToolButton" name="TypeSegment">
+     <property name="toolTip">
+      <string>Line Segment</string>
+     </property>
+     <property name="icon">
+      <iconset>
+       <normaloff>TypeSegment.svg</normaloff>TypeSegment.svg</iconset>
+     </property>
+     <property name="checkable">
+      <bool>true</bool>
+     </property>
+     <property name="checked">
+      <bool>false</bool>
+     </property>
+     <property name="autoExclusive">
+      <bool>false</bool>
+     </property>
+     <attribute name="buttonGroup">
+      <string notr="true">Type</string>
+     </attribute>
+    </widget>
+   </item>
+   <item>
+    <widget class="QToolButton" name="TypeXLine">
+     <property name="toolTip">
+      <string>Infinite Line</string>
+     </property>
+     <property name="icon">
+      <iconset>
+       <normaloff>TypeXLine.svg</normaloff>TypeXLine.svg</iconset>
+     </property>
+     <property name="checkable">
+      <bool>true</bool>
+     </property>
+     <attribute name="buttonGroup">
+      <string notr="true">Type</string>
+     </attribute>
+    </widget>
+   </item>
+   <item>
+    <widget class="QToolButton" name="TypeRay">
+     <property name="toolTip">
+      <string>Ray</string>
+     </property>
+     <property name="icon">
+      <iconset>
+       <normaloff>TypeRay.svg</normaloff>TypeRay.svg</iconset>
+     </property>
+     <property name="checkable">
+      <bool>true</bool>
+     </property>
+     <attribute name="buttonGroup">
+      <string notr="true">Type</string>
+     </attribute>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+ <buttongroups>
+  <buttongroup name="Type"/>
+ </buttongroups>
+</ui>

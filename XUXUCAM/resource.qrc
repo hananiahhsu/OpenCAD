@@ -1,0 +1,45 @@
+<RCC>
+    <qresource prefix="/rec">
+        <file>Resource/File/new_order.png</file>
+        <file>Resource/File/open_order.png</file>
+        <file>Resource/File/save_order.png</file>
+        <file>Resource/Nest/new_mat.png</file>
+        <file>Resource/Nest/new_prt.png</file>
+        <file>Resource/Nest/new_layout.png</file>
+        <file>Resource/Nest/print_layout.png</file>
+        <file>Resource/Nest/print_preview.png</file>
+        <file>Resource/Nest/run_nest.png</file>
+        <file>Resource/Nest/send_factory.png</file>
+        <file>Resource/Layout/open_all_layout.png</file>
+        <file>Resource/Layout/open_layout.png</file>
+        <file>Resource/Layout/print_layout.png</file>
+        <file>Resource/File/import.png</file>
+        <file>Resource/File/export.png</file>
+        <file>Resource/KBE/equip_lib.png</file>
+        <file>Resource/KBE/mat_lib.png</file>
+        <file>Resource/KBE/tech_lib.png</file>
+        <file>Resource/Tools/cost.png</file>
+        <file>Resource/Tools/calculator.png</file>
+        <file>Resource/Help/about.png</file>
+        <file>Resource/Help/help.png</file>
+        <file>Resource/Drawing/Arc16.png</file>
+        <file>Resource/Drawing/Circle16.png</file>
+        <file>Resource/Drawing/copy16.png</file>
+        <file>Resource/Drawing/Dimension16.png</file>
+        <file>Resource/Drawing/Ellipse16.png</file>
+        <file>Resource/Drawing/Line16.png</file>
+        <file>Resource/Drawing/Point16.png</file>
+        <file>Resource/Drawing/Text16.png</file>
+        <file>Resource/Drawing/polygon16.png</file>
+        <file>Resource/File/quitb16.png</file>
+        <file>Resource/Drawing/delete16.png</file>
+        <file>Resource/Drawing/rotation16.png</file>
+        <file>Resource/Drawing/translations16.png</file>
+        <file>Resource/Drawing/choose16.png</file>
+        <file>Resource/Drawing/offset.png</file>
+        <file>Resource/Drawing/Line_Color.png</file>
+        <file>Resource/Drawing/Line_Type.png</file>
+        <file>Resource/Drawing/Line_Width.png</file>
+        <file>Resource/company/wit.png</file>
+    </qresource>
+</RCC>

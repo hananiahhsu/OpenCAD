@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>GraphicsView</class>
+ <widget class="QScrollArea" name="GraphicsView">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>582</width>
+    <height>615</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string notr="true"/>
+  </property>
+  <property name="widgetResizable">
+   <bool>true</bool>
+  </property>
+  <widget class="QWidget" name="scrollAreaWidgetContents">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>580</width>
+     <height>613</height>
+    </rect>
+   </property>
+   <layout class="QVBoxLayout" name="verticalLayout_4">
+    <item>
+     <widget class="QGroupBox" name="RightClick">
+      <property name="title">
+       <string>Right-Click</string>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout_2">
+       <item>
+        <widget class="QCheckBox" name="RightClickToDeselect">
+         <property name="text">
+          <string>Right-click to deselect entities</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+    <item>
+     <widget class="QGroupBox" name="DoubleClick">
+      <property name="title">
+       <string>Double-Click</string>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout">
+       <item>
+        <widget class="QCheckBox" name="DoubleClickEditText">
+         <property name="text">
+          <string>Double-click to edit text</string>
+         </property>
+         <property name="checked">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QCheckBox" name="DoubleClickEditHatch">
+         <property name="text">
+          <string>Double-click to edit hatch</string>
+         </property>
+         <property name="checked">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QCheckBox" name="DoubleClickEditBlock">
+         <property name="text">
+          <string>Double-click on block reference opens block</string>
+         </property>
+         <property name="checked">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QCheckBox" name="DoubleClickSelectContour">
+         <property name="text">
+          <string>Double-click to select contour</string>
+         </property>
+         <property name="checked">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QCheckBox" name="RightDoubleClickToReset">
+         <property name="text">
+          <string>Right double-click to reset</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+    <item>
+     <widget class="QGroupBox" name="groupBox">
+      <property name="title">
+       <string>Blocks</string>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout_3">
+       <item>
+        <widget class="QCheckBox" name="SelectBlockWithAttribute">
+         <property name="text">
+          <string>Select block references together with attributes</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QCheckBox" name="HideAttributeWithBlock">
+         <property name="text">
+          <string>Hide attributes when block references are hidden</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+    <item>
+     <widget class="QGroupBox" name="groupBox_2">
+      <property name="title">
+       <string>Cursor Range</string>
+      </property>
+      <layout class="QHBoxLayout" name="horizontalLayout">
+       <item>
+        <layout class="QGridLayout" name="gridLayout">
+         <item row="0" column="0">
+          <widget class="QLabel" name="label">
+           <property name="text">
+            <string>Cursor range for snap:</string>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="1">
+          <widget class="QComboBox" name="SnapRange">
+           <property name="editable">
+            <bool>true</bool>
+           </property>
+           <item>
+            <property name="text">
+             <string notr="true">10</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string notr="true">15</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string notr="true">20</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string notr="true">25</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string notr="true">30</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string notr="true">50</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string notr="true">100</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string notr="true">10000</string>
+            </property>
+           </item>
+          </widget>
+         </item>
+         <item row="1" column="0">
+          <widget class="QLabel" name="label_2">
+           <property name="text">
+            <string>Cursor range for picking entities:</string>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="1">
+          <widget class="QComboBox" name="PickRange">
+           <property name="editable">
+            <bool>true</bool>
+           </property>
+           <item>
+            <property name="text">
+             <string notr="true">10</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string notr="true">15</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string notr="true">20</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string notr="true">25</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string notr="true">30</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string notr="true">50</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string notr="true">100</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string notr="true">10000</string>
+            </property>
+           </item>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <spacer name="horizontalSpacer">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>40</width>
+           <height>20</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+      </layout>
+     </widget>
+    </item>
+    <item>
+     <spacer name="verticalSpacer">
+      <property name="orientation">
+       <enum>Qt::Vertical</enum>
+      </property>
+      <property name="sizeHint" stdset="0">
+       <size>
+        <width>20</width>
+        <height>40</height>
+       </size>
+      </property>
+     </spacer>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

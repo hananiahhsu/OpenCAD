@@ -1,0 +1,835 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>GraphicsView</class>
+ <widget class="QScrollArea" name="GraphicsView">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>652</width>
+    <height>929</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string notr="true"/>
+  </property>
+  <property name="widgetResizable">
+   <bool>true</bool>
+  </property>
+  <widget class="QWidget" name="scrollAreaWidgetContents">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>650</width>
+     <height>927</height>
+    </rect>
+   </property>
+   <layout class="QVBoxLayout" name="verticalLayout_2">
+    <item>
+     <widget class="QGroupBox" name="Origin">
+      <property name="title">
+       <string>Origin</string>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout">
+       <item>
+        <widget class="QCheckBox" name="ShowLargeOriginAxis">
+         <property name="text">
+          <string>Show large origin axis</string>
+         </property>
+         <property name="checked">
+          <bool>false</bool>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+    <item>
+     <widget class="QGroupBox" name="groupBox">
+      <property name="title">
+       <string>Rulers and Scrollbars</string>
+      </property>
+      <layout class="QHBoxLayout" name="horizontalLayout_2">
+       <item>
+        <widget class="QCheckBox" name="ShowRulers">
+         <property name="text">
+          <string>Show rulers</string>
+         </property>
+         <property name="checked">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QCheckBox" name="ShowScrollBars">
+         <property name="text">
+          <string>Show scrollbars</string>
+         </property>
+         <property name="checked">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+    <item>
+     <widget class="QGroupBox" name="groupBox_2">
+      <property name="title">
+       <string>Cursor</string>
+      </property>
+      <layout class="QHBoxLayout" name="horizontalLayout_3">
+       <item>
+        <widget class="QCheckBox" name="ShowCrosshair">
+         <property name="text">
+          <string>Show crosshairs</string>
+         </property>
+         <property name="checked">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QCheckBox" name="ShowLargeCrosshair">
+         <property name="text">
+          <string>Show large crosshairs</string>
+         </property>
+         <property name="checked">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+    <item>
+     <widget class="QGroupBox" name="groupBox_6">
+      <property name="title">
+       <string>Auto Zoom</string>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout_4">
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayout">
+         <item>
+          <widget class="QLabel" name="label">
+           <property name="text">
+            <string>Margin (px):</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QComboBox" name="Margin">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="minimumSize">
+            <size>
+             <width>100</width>
+             <height>0</height>
+            </size>
+           </property>
+           <property name="editable">
+            <bool>true</bool>
+           </property>
+           <property name="currentIndex">
+            <number>2</number>
+           </property>
+           <item>
+            <property name="text">
+             <string notr="true">0</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string notr="true">10</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string notr="true">25</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string notr="true">50</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string notr="true">100</string>
+            </property>
+           </item>
+          </widget>
+         </item>
+         <item>
+          <spacer name="horizontalSpacer_3">
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>40</width>
+             <height>20</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <widget class="QCheckBox" name="AutoZoomOnLoad">
+         <property name="text">
+          <string>Auto zoom on load</string>
+         </property>
+         <property name="checked">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+    <item>
+     <widget class="QGroupBox" name="groupBox_4">
+      <property name="title">
+       <string>Color Adjustment</string>
+      </property>
+      <layout class="QGridLayout" name="gridLayout">
+       <item row="0" column="0" colspan="4">
+        <widget class="QCheckBox" name="ColorCorrection">
+         <property name="text">
+          <string>Prevent white on white / black on black display</string>
+         </property>
+         <property name="checked">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="0">
+        <widget class="QWidget" name="widget" native="true">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="minimumSize">
+          <size>
+           <width>25</width>
+           <height>25</height>
+          </size>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="1">
+        <widget class="QLabel" name="label_2">
+         <property name="text">
+          <string>Color lightness threshold:</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="2">
+        <widget class="QSpinBox" name="ColorThreshold">
+         <property name="maximum">
+          <number>254</number>
+         </property>
+         <property name="value">
+          <number>10</number>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="3">
+        <spacer name="horizontalSpacer">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>249</width>
+           <height>22</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+      </layout>
+     </widget>
+    </item>
+    <item>
+     <widget class="QGroupBox" name="groupBox_3">
+      <property name="title">
+       <string>Linetypes</string>
+      </property>
+      <layout class="QGridLayout" name="gridLayout_2">
+       <item row="0" column="0" colspan="3">
+        <widget class="QCheckBox" name="AutoSwitchLinetypes">
+         <property name="toolTip">
+          <string>Automatically use screen based linetypes in model view</string>
+         </property>
+         <property name="text">
+          <string>Auto switch to screen based linetypes in model view</string>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="0" colspan="3">
+        <widget class="QCheckBox" name="AutoScaleLinetypePatterns">
+         <property name="text">
+          <string>Scale linetype patterns by line weight</string>
+         </property>
+         <property name="checked">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="0">
+        <widget class="QWidget" name="widget_2" native="true">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="minimumSize">
+          <size>
+           <width>25</width>
+           <height>25</height>
+          </size>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="1">
+        <widget class="QLabel" name="label_5">
+         <property name="text">
+          <string>Pattern scale for lineweight 0.00mm:</string>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="2">
+        <widget class="RLineweightCombo" name="ZeroWeightWeight">
+         <property name="minimumSize">
+          <size>
+           <width>100</width>
+           <height>0</height>
+          </size>
+         </property>
+         <property name="onlyFixed" stdset="0">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="3">
+        <spacer name="horizontalSpacer_2">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>40</width>
+           <height>20</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+      </layout>
+     </widget>
+    </item>
+    <item>
+     <widget class="QGroupBox" name="groupBox_8">
+      <property name="title">
+       <string>Display and Performance</string>
+      </property>
+      <layout class="QFormLayout" name="formLayout_2">
+       <item row="0" column="0" colspan="2">
+        <widget class="QCheckBox" name="Antialiasing">
+         <property name="text">
+          <string>Anti-aliasing on by default</string>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="0" colspan="2">
+        <widget class="QCheckBox" name="HighResolutionGraphicsView">
+         <property name="text">
+          <string>Use full resolution for Retina display</string>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="0">
+        <widget class="QLabel" name="label_15">
+         <property name="text">
+          <string>Number of preview entities:</string>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="1">
+        <widget class="QComboBox" name="PreviewEntities">
+         <property name="minimumSize">
+          <size>
+           <width>100</width>
+           <height>0</height>
+          </size>
+         </property>
+         <property name="editable">
+          <bool>true</bool>
+         </property>
+         <property name="currentIndex">
+          <number>3</number>
+         </property>
+         <item>
+          <property name="text">
+           <string notr="true">0</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string notr="true">25</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string notr="true">50</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string notr="true">100</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string notr="true">250</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string notr="true">500</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string notr="true">1000</string>
+          </property>
+         </item>
+        </widget>
+       </item>
+       <item row="3" column="0">
+        <widget class="QLabel" name="label_4">
+         <property name="text">
+          <string>Display arcs as lines below this angle (degrees):</string>
+         </property>
+        </widget>
+       </item>
+       <item row="3" column="1">
+        <widget class="QComboBox" name="ArcAngleLengthThreshold">
+         <property name="editable">
+          <bool>true</bool>
+         </property>
+         <item>
+          <property name="text">
+           <string notr="true">0</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string notr="true">0.5</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string notr="true">1.0</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string notr="true">1.5</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string notr="true">2.0</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string notr="true">2.5</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string notr="true">3.0</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string notr="true">3.5</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string notr="true">4.0</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string notr="true">4.5</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string notr="true">5.0</string>
+          </property>
+         </item>
+        </widget>
+       </item>
+       <item row="4" column="0">
+        <widget class="QLabel" name="label_7">
+         <property name="text">
+          <string>Minimum angle step for rendering arcs (degrees):</string>
+         </property>
+        </widget>
+       </item>
+       <item row="4" column="1">
+        <widget class="QComboBox" name="MinArcAngleStep">
+         <property name="editable">
+          <bool>true</bool>
+         </property>
+         <property name="currentIndex">
+          <number>6</number>
+         </property>
+         <item>
+          <property name="text">
+           <string notr="true">0</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string notr="true">0.0001</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string notr="true">0.001</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string notr="true">0.01</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string notr="true">0.05</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string notr="true">0.1</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string notr="true">0.2</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string notr="true">0.5</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string notr="true">1</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string notr="true">2</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string notr="true">3</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string notr="true">4</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string notr="true">5</string>
+          </property>
+         </item>
+        </widget>
+       </item>
+       <item row="5" column="0">
+        <widget class="QLabel" name="label_6">
+         <property name="text">
+          <string>Display entities with more than N dashes as continuous:</string>
+         </property>
+        </widget>
+       </item>
+       <item row="5" column="1">
+        <widget class="QComboBox" name="DashThreshold">
+         <property name="editable">
+          <bool>true</bool>
+         </property>
+         <property name="currentIndex">
+          <number>1</number>
+         </property>
+         <item>
+          <property name="text">
+           <string notr="true">500</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string notr="true">1000</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string notr="true">5000</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string notr="true">10000</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string notr="true">100000</string>
+          </property>
+         </item>
+        </widget>
+       </item>
+       <item row="6" column="0">
+        <widget class="QLabel" name="label_8">
+         <property name="text">
+          <string>Timeout for hatch rendering:</string>
+         </property>
+        </widget>
+       </item>
+       <item row="6" column="1">
+        <widget class="QComboBox" name="MaxHatchTime">
+         <property name="editable">
+          <bool>true</bool>
+         </property>
+         <property name="currentIndex">
+          <number>5</number>
+         </property>
+         <item>
+          <property name="text">
+           <string notr="true">125</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string notr="true">250</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string notr="true">500</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string notr="true">1000</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string notr="true">1500</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string notr="true">2000</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string notr="true">2500</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string notr="true">5000</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string notr="true">10000</string>
+          </property>
+         </item>
+        </widget>
+       </item>
+       <item row="7" column="0">
+        <widget class="QLabel" name="label_9">
+         <property name="text">
+          <string>Maximum number of reference points displayed:</string>
+         </property>
+        </widget>
+       </item>
+       <item row="7" column="1">
+        <widget class="QComboBox" name="MaxReferencePoints">
+         <property name="editable">
+          <bool>true</bool>
+         </property>
+         <property name="currentIndex">
+          <number>6</number>
+         </property>
+         <item>
+          <property name="text">
+           <string notr="true">0</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string notr="true">1000</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string notr="true">2500</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string notr="true">5000</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string notr="true">10000</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string notr="true">50000</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string notr="true">100000</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string notr="true">250000</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string notr="true">500000</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string notr="true">1000000</string>
+          </property>
+         </item>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+    <item>
+     <widget class="QGroupBox" name="groupBox_7">
+      <property name="title">
+       <string>Selection</string>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout_3">
+       <item>
+        <widget class="QCheckBox" name="PersistentSelection">
+         <property name="text">
+          <string>Persistent Selection</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+    <item>
+     <spacer name="verticalSpacer">
+      <property name="orientation">
+       <enum>Qt::Vertical</enum>
+      </property>
+      <property name="sizeHint" stdset="0">
+       <size>
+        <width>20</width>
+        <height>49</height>
+       </size>
+      </property>
+     </spacer>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>RLineweightCombo</class>
+   <extends>QComboBox</extends>
+   <header>RLineweightCombo.h</header>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>ShowCrosshair</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>ShowLargeCrosshair</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>168</x>
+     <y>101</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>435</x>
+     <y>112</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>AutoScaleLinetypePatterns</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>label_5</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>215</x>
+     <y>356</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>210</x>
+     <y>382</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>AutoScaleLinetypePatterns</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>ZeroWeightWeight</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>332</x>
+     <y>360</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>336</x>
+     <y>380</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>

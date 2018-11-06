@@ -1,0 +1,1057 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>CAMExpert</class>
+ <widget class="QMainWindow" name="CAMExpert">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1095</width>
+    <height>529</height>
+   </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="mouseTracking">
+   <bool>true</bool>
+  </property>
+  <property name="windowTitle">
+   <string>CAMExpert</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="resource.qrc">
+    <normaloff>:/rec/Resource/company/wit.png</normaloff>:/rec/Resource/company/wit.png</iconset>
+  </property>
+  <property name="iconSize">
+   <size>
+    <width>24</width>
+    <height>24</height>
+   </size>
+  </property>
+  <property name="documentMode">
+   <bool>false</bool>
+  </property>
+  <property name="dockOptions">
+   <set>QMainWindow::AllowNestedDocks|QMainWindow::AllowTabbedDocks|QMainWindow::AnimatedDocks|QMainWindow::GroupedDragging|QMainWindow::VerticalTabs</set>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <layout class="QVBoxLayout" name="verticalLayout_3">
+    <item>
+     <widget class="QMdiArea" name="mdiArea"/>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1095</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="File">
+    <property name="title">
+     <string>文件</string>
+    </property>
+    <addaction name="new_order"/>
+    <addaction name="save_order"/>
+    <addaction name="history_order"/>
+    <addaction name="separator"/>
+    <addaction name="import_2"/>
+    <addaction name="export_2"/>
+    <addaction name="separator"/>
+    <addaction name="quit"/>
+   </widget>
+   <widget class="QMenu" name="Manufacturing">
+    <property name="title">
+     <string>工艺</string>
+    </property>
+    <addaction name="auto_manuf"/>
+    <addaction name="edit_manuf"/>
+    <addaction name="separator"/>
+   </widget>
+   <widget class="QMenu" name="Layout">
+    <property name="title">
+     <string>布局</string>
+    </property>
+    <addaction name="open_layout"/>
+    <addaction name="print_layout"/>
+    <addaction name="open_all_layout"/>
+   </widget>
+   <widget class="QMenu" name="Help">
+    <property name="title">
+     <string>帮助</string>
+    </property>
+    <addaction name="help_files"/>
+    <addaction name="about"/>
+   </widget>
+   <widget class="QMenu" name="Nest">
+    <property name="title">
+     <string>套料</string>
+    </property>
+    <addaction name="new_mat"/>
+    <addaction name="new_prt"/>
+    <addaction name="new_layout"/>
+    <addaction name="separator"/>
+    <addaction name="run"/>
+    <addaction name="send"/>
+    <addaction name="separator"/>
+    <addaction name="print_preview"/>
+    <addaction name="print"/>
+   </widget>
+   <widget class="QMenu" name="Tools">
+    <property name="title">
+     <string>工具</string>
+    </property>
+    <addaction name="cost"/>
+    <addaction name="calculator"/>
+   </widget>
+   <widget class="QMenu" name="Knowledge">
+    <property name="title">
+     <string>知识库</string>
+    </property>
+    <addaction name="equipments"/>
+    <addaction name="materials"/>
+    <addaction name="manufs"/>
+   </widget>
+   <widget class="QMenu" name="Drawing">
+    <property name="title">
+     <string>绘图</string>
+    </property>
+    <widget class="QMenu" name="basic">
+     <property name="title">
+      <string>基本绘图</string>
+     </property>
+     <addaction name="Line"/>
+     <addaction name="Arc"/>
+     <addaction name="Text"/>
+    </widget>
+    <widget class="QMenu" name="advanced">
+     <property name="title">
+      <string>高级绘图</string>
+     </property>
+     <addaction name="Circle"/>
+     <addaction name="Ellipse"/>
+     <addaction name="Polygon"/>
+    </widget>
+    <widget class="QMenu" name="modify">
+     <property name="title">
+      <string>修改</string>
+     </property>
+     <addaction name="Delete"/>
+     <addaction name="Offset"/>
+     <addaction name="Rotation"/>
+     <addaction name="Translation"/>
+     <addaction name="Copy"/>
+     <addaction name="Choose"/>
+    </widget>
+    <widget class="QMenu" name="anno">
+     <property name="title">
+      <string>标注</string>
+     </property>
+     <addaction name="Dimension"/>
+    </widget>
+    <widget class="QMenu" name="attribute">
+     <property name="title">
+      <string>属性</string>
+     </property>
+     <addaction name="Line_Width"/>
+     <addaction name="Line_Type"/>
+     <addaction name="Line_Color"/>
+    </widget>
+    <addaction name="basic"/>
+    <addaction name="advanced"/>
+    <addaction name="modify"/>
+    <addaction name="anno"/>
+    <addaction name="attribute"/>
+   </widget>
+   <addaction name="File"/>
+   <addaction name="Nest"/>
+   <addaction name="Drawing"/>
+   <addaction name="Manufacturing"/>
+   <addaction name="Layout"/>
+   <addaction name="Tools"/>
+   <addaction name="Knowledge"/>
+   <addaction name="Help"/>
+  </widget>
+  <widget class="QStatusBar" name="statusBar">
+   <property name="sizePolicy">
+    <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+     <horstretch>0</horstretch>
+     <verstretch>0</verstretch>
+    </sizepolicy>
+   </property>
+   <property name="baseSize">
+    <size>
+     <width>0</width>
+     <height>1</height>
+    </size>
+   </property>
+   <property name="cursor">
+    <cursorShape>CrossCursor</cursorShape>
+   </property>
+   <property name="mouseTracking">
+    <bool>true</bool>
+   </property>
+   <property name="focusPolicy">
+    <enum>Qt::ClickFocus</enum>
+   </property>
+   <property name="acceptDrops">
+    <bool>true</bool>
+   </property>
+   <property name="autoFillBackground">
+    <bool>false</bool>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border-color: rgb(255, 170, 127);
+background-color: rgb(170, 255, 127);</string>
+   </property>
+  </widget>
+  <widget class="QToolBar" name="File_Bar">
+   <property name="sizePolicy">
+    <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+     <horstretch>0</horstretch>
+     <verstretch>0</verstretch>
+    </sizepolicy>
+   </property>
+   <property name="windowTitle">
+    <string>toolBar</string>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="new_order"/>
+   <addaction name="save_order"/>
+   <addaction name="history_order"/>
+   <addaction name="import_2"/>
+   <addaction name="export_2"/>
+   <addaction name="quit"/>
+  </widget>
+  <widget class="QToolBar" name="Drawing_Bar">
+   <property name="sizePolicy">
+    <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+     <horstretch>0</horstretch>
+     <verstretch>0</verstretch>
+    </sizepolicy>
+   </property>
+   <property name="windowTitle">
+    <string>toolBar</string>
+   </property>
+   <property name="layoutDirection">
+    <enum>Qt::LeftToRight</enum>
+   </property>
+   <property name="floatable">
+    <bool>false</bool>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>true</bool>
+   </attribute>
+   <addaction name="Line"/>
+   <addaction name="Arc"/>
+   <addaction name="Text"/>
+   <addaction name="separator"/>
+   <addaction name="Circle"/>
+   <addaction name="Ellipse"/>
+   <addaction name="Polygon"/>
+   <addaction name="separator"/>
+   <addaction name="Delete"/>
+   <addaction name="Offset"/>
+   <addaction name="Rotation"/>
+   <addaction name="Translation"/>
+   <addaction name="Copy"/>
+   <addaction name="Choose"/>
+   <addaction name="separator"/>
+   <addaction name="Dimension"/>
+   <addaction name="separator"/>
+   <addaction name="Line_Width"/>
+   <addaction name="Line_Type"/>
+   <addaction name="Line_Color"/>
+  </widget>
+  <widget class="QToolBar" name="Nest_Bar">
+   <property name="sizePolicy">
+    <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+     <horstretch>0</horstretch>
+     <verstretch>0</verstretch>
+    </sizepolicy>
+   </property>
+   <property name="windowTitle">
+    <string>toolBar</string>
+   </property>
+   <property name="layoutDirection">
+    <enum>Qt::LeftToRight</enum>
+   </property>
+   <property name="floatable">
+    <bool>false</bool>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="new_mat"/>
+   <addaction name="new_layout"/>
+   <addaction name="new_prt"/>
+   <addaction name="run"/>
+   <addaction name="print_preview"/>
+   <addaction name="print"/>
+   <addaction name="send"/>
+  </widget>
+  <widget class="QToolBar" name="Tech_Bar">
+   <property name="windowTitle">
+    <string>toolBar</string>
+   </property>
+   <property name="layoutDirection">
+    <enum>Qt::LeftToRight</enum>
+   </property>
+   <property name="floatable">
+    <bool>false</bool>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+  </widget>
+  <widget class="QToolBar" name="Layout_Bar">
+   <property name="windowTitle">
+    <string>toolBar</string>
+   </property>
+   <property name="layoutDirection">
+    <enum>Qt::LeftToRight</enum>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="open_layout"/>
+   <addaction name="print_layout"/>
+   <addaction name="open_all_layout"/>
+  </widget>
+  <widget class="QToolBar" name="Tool_Bar">
+   <property name="sizePolicy">
+    <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+     <horstretch>0</horstretch>
+     <verstretch>0</verstretch>
+    </sizepolicy>
+   </property>
+   <property name="windowTitle">
+    <string>toolBar</string>
+   </property>
+   <property name="layoutDirection">
+    <enum>Qt::LeftToRight</enum>
+   </property>
+   <property name="floatable">
+    <bool>false</bool>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="cost"/>
+   <addaction name="calculator"/>
+  </widget>
+  <widget class="QToolBar" name="Kbe_Bar">
+   <property name="sizePolicy">
+    <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+     <horstretch>0</horstretch>
+     <verstretch>0</verstretch>
+    </sizepolicy>
+   </property>
+   <property name="windowTitle">
+    <string>toolBar</string>
+   </property>
+   <property name="layoutDirection">
+    <enum>Qt::LeftToRight</enum>
+   </property>
+   <property name="floatable">
+    <bool>false</bool>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="equipments"/>
+   <addaction name="materials"/>
+   <addaction name="manufs"/>
+  </widget>
+  <widget class="QToolBar" name="Help_Bar">
+   <property name="sizePolicy">
+    <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+     <horstretch>0</horstretch>
+     <verstretch>0</verstretch>
+    </sizepolicy>
+   </property>
+   <property name="windowTitle">
+    <string>toolBar</string>
+   </property>
+   <property name="layoutDirection">
+    <enum>Qt::LeftToRight</enum>
+   </property>
+   <property name="floatable">
+    <bool>false</bool>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="help_files"/>
+   <addaction name="about"/>
+  </widget>
+  <widget class="QDockWidget" name="dockWidget_new_plate">
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="sizePolicy">
+    <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+     <horstretch>0</horstretch>
+     <verstretch>0</verstretch>
+    </sizepolicy>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>220</width>
+     <height>342</height>
+    </size>
+   </property>
+   <property name="maximumSize">
+    <size>
+     <width>450</width>
+     <height>524287</height>
+    </size>
+   </property>
+   <property name="focusPolicy">
+    <enum>Qt::ClickFocus</enum>
+   </property>
+   <property name="contextMenuPolicy">
+    <enum>Qt::ActionsContextMenu</enum>
+   </property>
+   <property name="acceptDrops">
+    <bool>false</bool>
+   </property>
+   <property name="statusTip">
+    <string/>
+   </property>
+   <property name="autoFillBackground">
+    <bool>true</bool>
+   </property>
+   <property name="styleSheet">
+    <string notr="true"/>
+   </property>
+   <property name="inputMethodHints">
+    <set>Qt::ImhNone</set>
+   </property>
+   <property name="floating">
+    <bool>false</bool>
+   </property>
+   <property name="features">
+    <set>QDockWidget::AllDockWidgetFeatures</set>
+   </property>
+   <property name="windowTitle">
+    <string extracomment="Plates">新建板材</string>
+   </property>
+   <attribute name="dockWidgetArea">
+    <number>1</number>
+   </attribute>
+   <widget class="QWidget" name="dockWidgetContents_5">
+    <property name="sizePolicy">
+     <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+      <horstretch>0</horstretch>
+      <verstretch>0</verstretch>
+     </sizepolicy>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>220</width>
+      <height>280</height>
+     </size>
+    </property>
+    <layout class="QGridLayout" name="gridLayout_2">
+     <property name="leftMargin">
+      <number>0</number>
+     </property>
+     <property name="topMargin">
+      <number>0</number>
+     </property>
+     <property name="rightMargin">
+      <number>0</number>
+     </property>
+     <property name="horizontalSpacing">
+      <number>0</number>
+     </property>
+     <item row="0" column="0">
+      <layout class="QGridLayout" name="gridLayout">
+       <property name="horizontalSpacing">
+        <number>0</number>
+       </property>
+       <item row="0" column="0">
+        <widget class="QTableView" name="Plate_tableView">
+         <property name="enabled">
+          <bool>true</bool>
+         </property>
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+           <horstretch>0</horstretch>
+           <verstretch>100</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="mouseTracking">
+          <bool>true</bool>
+         </property>
+         <property name="focusPolicy">
+          <enum>Qt::ClickFocus</enum>
+         </property>
+         <property name="contextMenuPolicy">
+          <enum>Qt::ActionsContextMenu</enum>
+         </property>
+         <property name="acceptDrops">
+          <bool>true</bool>
+         </property>
+         <property name="styleSheet">
+          <string notr="true"/>
+         </property>
+         <property name="frameShape">
+          <enum>QFrame::StyledPanel</enum>
+         </property>
+         <property name="frameShadow">
+          <enum>QFrame::Plain</enum>
+         </property>
+         <property name="lineWidth">
+          <number>1</number>
+         </property>
+         <property name="verticalScrollBarPolicy">
+          <enum>Qt::ScrollBarAlwaysOn</enum>
+         </property>
+         <property name="horizontalScrollBarPolicy">
+          <enum>Qt::ScrollBarAlwaysOn</enum>
+         </property>
+         <property name="sizeAdjustPolicy">
+          <enum>QAbstractScrollArea::AdjustToContents</enum>
+         </property>
+         <property name="dragEnabled">
+          <bool>true</bool>
+         </property>
+         <property name="dragDropMode">
+          <enum>QAbstractItemView::DragDrop</enum>
+         </property>
+         <property name="defaultDropAction">
+          <enum>Qt::MoveAction</enum>
+         </property>
+         <property name="selectionMode">
+          <enum>QAbstractItemView::MultiSelection</enum>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+     <item row="1" column="0">
+      <layout class="QHBoxLayout" name="horizontalLayout_2">
+       <property name="spacing">
+        <number>6</number>
+       </property>
+       <item>
+        <spacer name="horizontalSpacer_2">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>0</width>
+           <height>20</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item>
+        <widget class="QPushButton" name="pushButton_NewMat">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+           <horstretch>100</horstretch>
+           <verstretch>1</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="minimumSize">
+          <size>
+           <width>0</width>
+           <height>25</height>
+          </size>
+         </property>
+         <property name="text">
+          <string>新建材料</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <spacer name="horizontalSpacer">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>0</width>
+           <height>20</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item>
+        <widget class="QPushButton" name="pushButton_importMat">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+           <horstretch>100</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="minimumSize">
+          <size>
+           <width>0</width>
+           <height>25</height>
+          </size>
+         </property>
+         <property name="text">
+          <string>导入材料</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <spacer name="horizontalSpacer_3">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>0</width>
+           <height>20</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+      </layout>
+     </item>
+     <item row="2" column="0">
+      <layout class="QGridLayout" name="gridLayout_3">
+       <property name="rightMargin">
+        <number>0</number>
+       </property>
+       <property name="horizontalSpacing">
+        <number>0</number>
+       </property>
+      </layout>
+     </item>
+    </layout>
+   </widget>
+  </widget>
+  <widget class="QDockWidget" name="dockWidget_new_part">
+   <property name="features">
+    <set>QDockWidget::AllDockWidgetFeatures</set>
+   </property>
+   <property name="windowTitle">
+    <string>新建零件</string>
+   </property>
+   <attribute name="dockWidgetArea">
+    <number>1</number>
+   </attribute>
+   <widget class="QWidget" name="dockWidgetContents_3"/>
+  </widget>
+  <widget class="QDockWidget" name="dockWidget_property">
+   <property name="windowTitle">
+    <string>图形属性</string>
+   </property>
+   <attribute name="dockWidgetArea">
+    <number>1</number>
+   </attribute>
+   <widget class="QWidget" name="dockWidgetContents"/>
+  </widget>
+  <action name="auto_manuf">
+   <property name="text">
+    <string>自动分配工序</string>
+   </property>
+  </action>
+  <action name="new_order">
+   <property name="icon">
+    <iconset resource="resource.qrc">
+     <normaloff>:/rec/Resource/File/new_order.png</normaloff>:/rec/Resource/File/new_order.png</iconset>
+   </property>
+   <property name="text">
+    <string>新建订单</string>
+   </property>
+  </action>
+  <action name="save_order">
+   <property name="icon">
+    <iconset resource="resource.qrc">
+     <normaloff>:/rec/Resource/File/save_order.png</normaloff>:/rec/Resource/File/save_order.png</iconset>
+   </property>
+   <property name="text">
+    <string>保存订单</string>
+   </property>
+  </action>
+  <action name="history_order">
+   <property name="icon">
+    <iconset resource="resource.qrc">
+     <normaloff>:/rec/Resource/File/open_order.png</normaloff>:/rec/Resource/File/open_order.png</iconset>
+   </property>
+   <property name="text">
+    <string>历史订单</string>
+   </property>
+  </action>
+  <action name="quit">
+   <property name="icon">
+    <iconset resource="resource.qrc">
+     <normaloff>:/rec/Resource/File/quitb16.png</normaloff>:/rec/Resource/File/quitb16.png</iconset>
+   </property>
+   <property name="text">
+    <string>退出</string>
+   </property>
+  </action>
+  <action name="open_layout">
+   <property name="icon">
+    <iconset resource="resource.qrc">
+     <normaloff>:/rec/Resource/Layout/open_layout.png</normaloff>:/rec/Resource/Layout/open_layout.png</iconset>
+   </property>
+   <property name="text">
+    <string>打开布局</string>
+   </property>
+  </action>
+  <action name="print_layout">
+   <property name="icon">
+    <iconset resource="resource.qrc">
+     <normaloff>:/rec/Resource/Layout/print_layout.png</normaloff>:/rec/Resource/Layout/print_layout.png</iconset>
+   </property>
+   <property name="text">
+    <string>打印布局</string>
+   </property>
+  </action>
+  <action name="open_all_layout">
+   <property name="icon">
+    <iconset resource="resource.qrc">
+     <normaloff>:/rec/Resource/Layout/open_all_layout.png</normaloff>:/rec/Resource/Layout/open_all_layout.png</iconset>
+   </property>
+   <property name="text">
+    <string>打开所有布局</string>
+   </property>
+  </action>
+  <action name="edit_manuf">
+   <property name="text">
+    <string>编辑工序</string>
+   </property>
+  </action>
+  <action name="help_files">
+   <property name="icon">
+    <iconset resource="resource.qrc">
+     <normaloff>:/rec/Resource/Help/help.png</normaloff>:/rec/Resource/Help/help.png</iconset>
+   </property>
+   <property name="text">
+    <string>帮助文档</string>
+   </property>
+  </action>
+  <action name="about">
+   <property name="icon">
+    <iconset resource="resource.qrc">
+     <normaloff>:/rec/Resource/Help/about.png</normaloff>:/rec/Resource/Help/about.png</iconset>
+   </property>
+   <property name="text">
+    <string>关于WITCAM</string>
+   </property>
+  </action>
+  <action name="run">
+   <property name="icon">
+    <iconset resource="resource.qrc">
+     <normaloff>:/rec/Resource/Nest/run_nest.png</normaloff>:/rec/Resource/Nest/run_nest.png</iconset>
+   </property>
+   <property name="text">
+    <string>执行套料</string>
+   </property>
+  </action>
+  <action name="print_preview">
+   <property name="icon">
+    <iconset resource="resource.qrc">
+     <normaloff>:/rec/Resource/Nest/print_preview.png</normaloff>:/rec/Resource/Nest/print_preview.png</iconset>
+   </property>
+   <property name="text">
+    <string>打印预览</string>
+   </property>
+  </action>
+  <action name="send">
+   <property name="icon">
+    <iconset resource="resource.qrc">
+     <normaloff>:/rec/Resource/Nest/send_factory.png</normaloff>:/rec/Resource/Nest/send_factory.png</iconset>
+   </property>
+   <property name="text">
+    <string>发送给生产</string>
+   </property>
+  </action>
+  <action name="new_mat">
+   <property name="icon">
+    <iconset resource="resource.qrc">
+     <normaloff>:/rec/Resource/Nest/new_mat.png</normaloff>:/rec/Resource/Nest/new_mat.png</iconset>
+   </property>
+   <property name="text">
+    <string>新建板材</string>
+   </property>
+  </action>
+  <action name="new_layout">
+   <property name="icon">
+    <iconset resource="resource.qrc">
+     <normaloff>:/rec/Resource/Nest/new_layout.png</normaloff>:/rec/Resource/Nest/new_layout.png</iconset>
+   </property>
+   <property name="text">
+    <string>新建排版</string>
+   </property>
+  </action>
+  <action name="new_prt">
+   <property name="icon">
+    <iconset resource="resource.qrc">
+     <normaloff>:/rec/Resource/Nest/new_prt.png</normaloff>:/rec/Resource/Nest/new_prt.png</iconset>
+   </property>
+   <property name="text">
+    <string>新建零件</string>
+   </property>
+  </action>
+  <action name="print">
+   <property name="icon">
+    <iconset resource="resource.qrc">
+     <normaloff>:/rec/Resource/Nest/print_layout.png</normaloff>:/rec/Resource/Nest/print_layout.png</iconset>
+   </property>
+   <property name="text">
+    <string>打印</string>
+   </property>
+  </action>
+  <action name="print_setting">
+   <property name="text">
+    <string>打印设置</string>
+   </property>
+  </action>
+  <action name="equipments">
+   <property name="icon">
+    <iconset resource="resource.qrc">
+     <normaloff>:/rec/Resource/KBE/equip_lib.png</normaloff>:/rec/Resource/KBE/equip_lib.png</iconset>
+   </property>
+   <property name="text">
+    <string>设备库</string>
+   </property>
+  </action>
+  <action name="materials">
+   <property name="icon">
+    <iconset resource="resource.qrc">
+     <normaloff>:/rec/Resource/KBE/mat_lib.png</normaloff>:/rec/Resource/KBE/mat_lib.png</iconset>
+   </property>
+   <property name="text">
+    <string>材料库</string>
+   </property>
+  </action>
+  <action name="manufs">
+   <property name="icon">
+    <iconset resource="resource.qrc">
+     <normaloff>:/rec/Resource/KBE/tech_lib.png</normaloff>:/rec/Resource/KBE/tech_lib.png</iconset>
+   </property>
+   <property name="text">
+    <string>工艺库</string>
+   </property>
+  </action>
+  <action name="cost">
+   <property name="icon">
+    <iconset resource="resource.qrc">
+     <normaloff>:/rec/Resource/Tools/cost.png</normaloff>:/rec/Resource/Tools/cost.png</iconset>
+   </property>
+   <property name="text">
+    <string>计算成本</string>
+   </property>
+  </action>
+  <action name="import_2">
+   <property name="icon">
+    <iconset resource="resource.qrc">
+     <normaloff>:/rec/Resource/File/import.png</normaloff>:/rec/Resource/File/import.png</iconset>
+   </property>
+   <property name="text">
+    <string>导入</string>
+   </property>
+  </action>
+  <action name="export_2">
+   <property name="icon">
+    <iconset resource="resource.qrc">
+     <normaloff>:/rec/Resource/File/export.png</normaloff>:/rec/Resource/File/export.png</iconset>
+   </property>
+   <property name="text">
+    <string>导出</string>
+   </property>
+  </action>
+  <action name="calculator">
+   <property name="icon">
+    <iconset resource="resource.qrc">
+     <normaloff>:/rec/Resource/Tools/calculator.png</normaloff>:/rec/Resource/Tools/calculator.png</iconset>
+   </property>
+   <property name="text">
+    <string>计算器</string>
+   </property>
+  </action>
+  <action name="Line">
+   <property name="icon">
+    <iconset resource="resource.qrc">
+     <normaloff>:/rec/Resource/Drawing/Line16.png</normaloff>:/rec/Resource/Drawing/Line16.png</iconset>
+   </property>
+   <property name="text">
+    <string>直线</string>
+   </property>
+  </action>
+  <action name="Arc">
+   <property name="icon">
+    <iconset resource="resource.qrc">
+     <normaloff>:/rec/Resource/Drawing/Arc16.png</normaloff>:/rec/Resource/Drawing/Arc16.png</iconset>
+   </property>
+   <property name="text">
+    <string>圆弧</string>
+   </property>
+  </action>
+  <action name="Text">
+   <property name="icon">
+    <iconset resource="resource.qrc">
+     <normaloff>:/rec/Resource/Drawing/Text16.png</normaloff>:/rec/Resource/Drawing/Text16.png</iconset>
+   </property>
+   <property name="text">
+    <string>文字</string>
+   </property>
+  </action>
+  <action name="Circle">
+   <property name="icon">
+    <iconset resource="resource.qrc">
+     <normaloff>:/rec/Resource/Drawing/Circle16.png</normaloff>:/rec/Resource/Drawing/Circle16.png</iconset>
+   </property>
+   <property name="text">
+    <string>圆</string>
+   </property>
+  </action>
+  <action name="Ellipse">
+   <property name="icon">
+    <iconset resource="resource.qrc">
+     <normaloff>:/rec/Resource/Drawing/Ellipse16.png</normaloff>:/rec/Resource/Drawing/Ellipse16.png</iconset>
+   </property>
+   <property name="text">
+    <string>椭圆</string>
+   </property>
+  </action>
+  <action name="Polygon">
+   <property name="icon">
+    <iconset resource="resource.qrc">
+     <normaloff>:/rec/Resource/Drawing/polygon16.png</normaloff>:/rec/Resource/Drawing/polygon16.png</iconset>
+   </property>
+   <property name="text">
+    <string>多边形</string>
+   </property>
+  </action>
+  <action name="Delete">
+   <property name="icon">
+    <iconset resource="resource.qrc">
+     <normaloff>:/rec/Resource/Drawing/delete16.png</normaloff>:/rec/Resource/Drawing/delete16.png</iconset>
+   </property>
+   <property name="text">
+    <string>删除</string>
+   </property>
+  </action>
+  <action name="Offset">
+   <property name="icon">
+    <iconset resource="resource.qrc">
+     <normaloff>:/rec/Resource/Drawing/offset.png</normaloff>:/rec/Resource/Drawing/offset.png</iconset>
+   </property>
+   <property name="text">
+    <string>偏移</string>
+   </property>
+  </action>
+  <action name="Rotation">
+   <property name="icon">
+    <iconset resource="resource.qrc">
+     <normaloff>:/rec/Resource/Drawing/rotation16.png</normaloff>:/rec/Resource/Drawing/rotation16.png</iconset>
+   </property>
+   <property name="text">
+    <string>旋转</string>
+   </property>
+  </action>
+  <action name="Translation">
+   <property name="icon">
+    <iconset resource="resource.qrc">
+     <normaloff>:/rec/Resource/Drawing/translations16.png</normaloff>:/rec/Resource/Drawing/translations16.png</iconset>
+   </property>
+   <property name="text">
+    <string>平移</string>
+   </property>
+  </action>
+  <action name="Copy">
+   <property name="icon">
+    <iconset resource="resource.qrc">
+     <normaloff>:/rec/Resource/Drawing/copy16.png</normaloff>:/rec/Resource/Drawing/copy16.png</iconset>
+   </property>
+   <property name="text">
+    <string>复制</string>
+   </property>
+  </action>
+  <action name="Choose">
+   <property name="icon">
+    <iconset resource="resource.qrc">
+     <normaloff>:/rec/Resource/Drawing/choose16.png</normaloff>:/rec/Resource/Drawing/choose16.png</iconset>
+   </property>
+   <property name="text">
+    <string>选择图形</string>
+   </property>
+  </action>
+  <action name="Dimension">
+   <property name="icon">
+    <iconset resource="resource.qrc">
+     <normaloff>:/rec/Resource/Drawing/Dimension16.png</normaloff>:/rec/Resource/Drawing/Dimension16.png</iconset>
+   </property>
+   <property name="text">
+    <string>尺寸标注</string>
+   </property>
+  </action>
+  <action name="Line_Width">
+   <property name="icon">
+    <iconset resource="resource.qrc">
+     <normaloff>:/rec/Resource/Drawing/Line_Width.png</normaloff>:/rec/Resource/Drawing/Line_Width.png</iconset>
+   </property>
+   <property name="text">
+    <string>线宽</string>
+   </property>
+  </action>
+  <action name="Line_Type">
+   <property name="icon">
+    <iconset resource="resource.qrc">
+     <normaloff>:/rec/Resource/Drawing/Line_Type.png</normaloff>:/rec/Resource/Drawing/Line_Type.png</iconset>
+   </property>
+   <property name="text">
+    <string>线型</string>
+   </property>
+  </action>
+  <action name="Line_Color">
+   <property name="icon">
+    <iconset resource="resource.qrc">
+     <normaloff>:/rec/Resource/Drawing/Line_Color.png</normaloff>:/rec/Resource/Drawing/Line_Color.png</iconset>
+   </property>
+   <property name="text">
+    <string>颜色</string>
+   </property>
+  </action>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources>
+  <include location="resource.qrc"/>
+ </resources>
+ <connections/>
+</ui>
